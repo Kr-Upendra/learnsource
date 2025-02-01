@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable}  bg-gray-950 text-gray-200`}>
-        {children}
+        <div className="min-h-screen h-full w-full p-10 md:p-6 sm:p-4">
+          {children}
+        </div>
       </body>
     </html>
   );
