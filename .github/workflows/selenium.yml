@@ -17,10 +17,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: "22"
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Start Next.js server
+        run: npm run start &
 
       - name: Install Chrome
         run: |
@@ -28,7 +34,7 @@ jobs:
           sudo apt-get install -y google-chrome-stable
 
       - name: Run Selenium Tests
-        run: npm test
+        run: npm run test
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4

@@ -29,7 +29,7 @@ describe("Learn Source", function () {
   });
 
   it("Detail Screen", async function () {
-    await driver.get("https://learnsource.netlify.app/tool/google-chrome");
+    await driver.get("http://localhost:3000/tool/google-chrome");
     await driver.manage().window().setRect({ width: 1366, height: 736 });
     await driver.findElement(By.css(".w-full > img")).click();
     await driver.findElement(By.css(".mt-4")).click();
@@ -44,7 +44,7 @@ describe("Learn Source", function () {
   });
 
   it("Home Screen", async function () {
-    await driver.get("https://learnsource.netlify.app/");
+    await driver.get("http://localhost:3000");
     await driver.manage().window().setRect({ width: 1366, height: 736 });
     await driver.findElement(By.css(".text-center")).click();
     await driver.findElement(By.css(".mt-8")).click();
