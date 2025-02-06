@@ -27,9 +27,6 @@ jobs:
         run: |
           echo "API_BASE_URL=${{ secrets.API_BASE_URL }}" >> .env
 
-      - name: Print environment variable (for debugging)
-        run: cat .env
-
       - name: Build
         run: npm run build
 
