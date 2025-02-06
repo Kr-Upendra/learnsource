@@ -2,7 +2,7 @@ const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 
 describe("Learn Source Test Suite", function () {
-  this.timeout(80800);
+  this.timeout(30000);
   let driver;
   let vars;
 

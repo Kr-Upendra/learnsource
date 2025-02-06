@@ -22,10 +22,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Use secret as environment variable
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
-        run: echo "API Key is $API_KEY"
+      # Create .env file for Next.js
+      - name: Set environment variables
+        run: |
+          echo "API_BASE_URL=${{ secrets.API_BASE_URL }}" >> .env
+
+      - name: Print environment variable (for debugging)
+        run: cat .env
 
       - name: Build
         run: npm run build
