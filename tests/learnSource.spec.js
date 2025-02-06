@@ -1,7 +1,7 @@
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 
-describe("Learn Source", function () {
+describe("Learn Source Test Suite", function () {
   this.timeout(80800);
   let driver;
   let vars;
@@ -53,5 +53,22 @@ describe("Learn Source", function () {
     await driver.findElement(By.css(".mt-8")).click();
     await driver.findElement(By.css(".mt-8")).click();
     await driver.findElement(By.css(".mt-8")).click();
+  });
+
+  it("UserScreen", async function () {
+    await driver.get("http://localhost:8080/users");
+    await driver.manage().window().setRect({ width: 1366, height: 736 });
+    await driver.findElement(By.css(".text-center")).click();
+    await driver.findElement(By.css(".min-h-screen > div")).click();
+    await driver.findElement(By.css(".mt-8")).click();
+    await driver.findElement(By.css(".px-3:nth-child(7) > h1")).click();
+    await driver.findElement(By.css(".px-3:nth-child(7)")).click();
+    await driver.findElement(By.css(".px-3:nth-child(8)")).click();
+    await driver.findElement(By.css(".px-3:nth-child(4)")).click();
+    await driver.findElement(By.css(".px-3:nth-child(2)")).click();
+    await driver.findElement(By.css(".px-3:nth-child(1)")).click();
+    await driver.findElement(By.css(".px-3:nth-child(5)")).click();
+    await driver.findElement(By.css(".px-3:nth-child(6) > h1")).click();
+    await driver.findElement(By.css(".px-3:nth-child(6) > h1")).click();
   });
 });
