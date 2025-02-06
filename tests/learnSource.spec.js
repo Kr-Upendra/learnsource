@@ -1,8 +1,6 @@
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 
-const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
-
 describe("Learn Source", function () {
   this.timeout(80800);
   let driver;
