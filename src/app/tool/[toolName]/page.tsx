@@ -11,7 +11,7 @@ export default async function ToolDetailPage({
   const { toolName } = await params;
   const tech = techs.find((el) => el.slug === toolName);
   return (
-    <div>
+    <div className="mt-8">
       <Link href={"/"}>
         <Image
           alt=""

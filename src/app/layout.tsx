@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rammetto_One } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const rammetteOne = Rammetto_One({
   variable: "--font-rammette-one",
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${rammetteOne.variable}  antialiased`}>
         <div className="min-h-screen h-full w-full p-10 md:p-6 sm:p-4">
+          <Header />
           {children}
         </div>
       </body>
