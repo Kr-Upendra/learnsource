@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${rammetteOne.variable}  antialiased`}>
-        <div className="min-h-screen h-full w-full p-10 md:p-6 sm:p-4">
+        <div className="min-h-screen h-full w-full py-6 px-10 max-md:p-6 max-sm:p-4">
           <Header />
           {children}
         </div>
